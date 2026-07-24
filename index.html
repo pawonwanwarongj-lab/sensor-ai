@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medical Portfolio | Student Showcase</title>
+    <meta
+      name="description"
+      content="Portfolio หน้าเดียวสำหรับนักเรียนระดับชั้นมัธยมศึกษาปีที่ 3 สมัครเข้าเรียนต่อชั้นมัธยมศึกษาปีที่ 4 สายวิทยาศาสตร์-การแพทย์"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=Sarabun:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              medical: '#0A369D',
+              mint: '#10B981',
+              sky: '#38BDF8',
+              slateDark: '#0F172A',
+              slateLight: '#F8FAFC',
+              border: '#E2E8F0',
+            },
+            boxShadow: {
+              soft: '0 10px 30px rgba(10, 54, 157, 0.12)',
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: 'Prompt', 'Sarabun', sans-serif;
+      }
+
+      .nav-link.active {
+        color: #0A369D;
+        font-weight: 600;
+      }
+
+      .glass {
+        backdrop-filter: blur(12px);
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+
+      .card-hover {
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      .card-hover:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 40px rgba(2, 8, 23, 0.12);
+      }
+    </style>
+  </head>
+  <body class="bg-slateLight text-slateDark">
+    <!-- Sticky Header -->
+    <header class="sticky top-0 z-50 border-b border-border/70 glass">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+        <a href="#home" class="flex items-center gap-3">
+          <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-medical text-lg font-bold text-white shadow-md">
+            <i class="fa-solid fa-stethoscope"></i>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-medical">Medical Portfolio</p>
+            <p class="text-xs text-slate-600">นักเรียนชั้น ม.3</p>
+          </div>
+        </a>
+
+        <button
+          id="menuToggle"
+          class="rounded-xl border border-border bg-white p-2 text-medical shadow-sm lg:hidden"
+          aria-label="เปิดเมนู"
+        >
+          <i class="fa-solid fa-bars text-lg"></i>
+        </button>
+
+        <nav id="mobileNav" class="hidden lg:block">
+          <ul class="flex flex-col gap-3 rounded-2xl border border-border bg-white p-4 shadow-lg lg:flex-row lg:items-center lg:gap-6 lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none">
+            <li><a class="nav-link block py-1 text-sm font-medium text-slate-700 transition" href="#home">หน้าแรก</a></li>
+            <li><a class="nav-link block py-1 text-sm font-medium text-slate-700 transition" href="#about">เกี่ยวกับฉัน</a></li>
+            <li><a class="nav-link block py-1 text-sm font-medium text-slate-700 transition" href="#work">กิจกรรมและผลงาน</a></li>
+            <li><a class="nav-link block py-1 text-sm font-medium text-slate-700 transition" href="#certificates">เกียรติบัตร</a></li>
+            <li><a class="nav-link block py-1 text-sm font-medium text-slate-700 transition" href="#motivation">ทำไมต้องสายการแพทย์</a></li>
+            <li><a class="nav-link block py-1 text-sm font-medium text-slate-700 transition" href="#contact">ติดต่อ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="home">
+      <!-- Hero Section -->
+      <section class="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:py-24">
+        <div class="flex flex-col justify-center">
+          <span class="mb-4 inline-flex w-fit items-center rounded-full border border-sky/30 bg-sky/10 px-4 py-2 text-sm font-semibold text-medical">
+            <i class="fa-solid fa-heart-pulse mr-2"></i>
+            โครงการห้องเรียนพิเศษวิทยาศาสตร์-การแพทย์
+          </span>
+          <h1 class="text-4xl font-bold leading-tight text-slate-900 sm:text-5xl lg:text-6xl">
+            สวัสดี ฉันคือ <span class="text-medical">นางสาวพรพิมล แก้วกาญจน์</span>
+          </h1>
+          <p class="mt-5 text-lg leading-8 text-slate-700">
+            นักเรียนชั้นมัธยมศึกษาปีที่ 3 ที่รักวิทยาศาสตร์ ชื่นชอบการเรียนรู้เชิงลึกเกี่ยวกับร่างกายมนุษย์ และตั้งใจพัฒนาตนเองเพื่อเป็นแพทย์ที่มีความเห็นอกเห็นใจผู้อื่น
+          </p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="#work" class="inline-flex items-center justify-center rounded-xl bg-medical px-6 py-3 font-semibold text-white shadow-md transition hover:scale-105">
+              <i class="fa-solid fa-arrow-down mr-2"></i> ดูผลงาน
+            </a>
+            <a href="#contact" class="inline-flex items-center justify-center rounded-xl border border-border bg-white px-6 py-3 font-semibold text-slate-700 shadow-sm transition hover:scale-105">
+              <i class="fa-solid fa-paper-plane mr-2"></i> ติดต่อฉัน
+            </a>
+          </div>
+          <div class="mt-10 grid gap-4 sm:grid-cols-2">
+            <div class="rounded-2xl border border-border bg-white p-5 shadow-sm">
+              <p class="text-3xl font-bold text-medical">3.95</p>
+              <p class="mt-2 text-sm text-slate-600">GPAX</p>
+            </div>
+            <div class="rounded-2xl border border-border bg-white p-5 shadow-sm">
+              <p class="text-3xl font-bold text-mint">50+</p>
+              <p class="mt-2 text-sm text-slate-600">ชั่วโมงจิตอาสา</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center">
+          <div class="relative w-full max-w-xl overflow-hidden rounded-[2rem] border border-border bg-white p-3 shadow-soft">
+            <img
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='1100' viewBox='0 0 900 1100'%3E%3Crect width='900' height='1100' rx='40' fill='%23f8fafc'/%3E%3Crect x='80' y='80' width='740' height='940' rx='36' fill='white' stroke='%23e2e8f0' stroke-width='3'/%3E%3Ccircle cx='450' cy='380' r='180' fill='%230A369D' fill-opacity='0.12'/%3E%3Ccircle cx='450' cy='380' r='145' fill='%2310B981' fill-opacity='0.16'/%3E%3Ccircle cx='450' cy='380' r='108' fill='%2338BDF8' fill-opacity='0.24'/%3E%3Ccircle cx='450' cy='380' r='80' fill='%230A369D'/%3E%3Cpath d='M288 840c40-160 190-220 324-220 92 0 180 44 224 132' fill='none' stroke='%230F172A' stroke-width='22' stroke-linecap='round'/%3E%3Ctext x='450' y='990' text-anchor='middle' font-family='Prompt, Sarabun, sans-serif' font-size='40' fill='%230F172A' font-weight='700'%3EStudent Portrait%3C/text%3E%3C/svg%3E"
+              alt="รูปภาพนักเรียน"
+              class="h-full w-full rounded-[1.5rem] object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- About Me Section -->
+      <section id="about" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div class="mb-10 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <p class="mb-2 text-sm font-semibold uppercase tracking-[0.3em] text-medical">เกี่ยวกับฉัน</p>
+            <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">ผู้เรียนที่พร้อมเรียนรู้และดูแลผู้อื่น</h2>
+          </div>
+          <p class="max-w-2xl text-base leading-8 text-slate-700">
+            ฉันมีความสนใจด้านชีววิทยา กายวิภาคศาสตร์ และการปฐมพยาบาลตั้งแต่ช่วงมัธยมศึกษาตอนต้น จึงพยายามพัฒนาตนเองอย่างต่อเนื่องผ่านการเรียน การทำโครงงาน และการเข้าร่วมกิจกรรมในชุมชน
+          </p>
+        </div>
+
+        <div class="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
+          <div class="rounded-3xl border border-border bg-white p-8 shadow-sm">
+            <h3 class="text-2xl font-semibold text-slate-900">ข้อมูลสำคัญ</h3>
+            <div class="mt-6 grid gap-4 sm:grid-cols-3">
+              <div class="rounded-2xl bg-slateLight p-4">
+                <p class="text-2xl font-bold text-medical">3.95</p>
+                <p class="mt-1 text-sm text-slate-600">GPAX</p>
+              </div>
+              <div class="rounded-2xl bg-slateLight p-4">
+                <p class="text-2xl font-bold text-mint">50+</p>
+                <p class="mt-1 text-sm text-slate-600">ชั่วโมงจิตอาสา</p>
+              </div>
+              <div class="rounded-2xl bg-slateLight p-4">
+                <p class="text-2xl font-bold text-sky">4 lĩnh vực</p>
+                <p class="mt-1 text-sm text-slate-600">ความสนใจหลัก</p>
+              </div>
+            </div>
+            <div class="mt-6 rounded-2xl border border-sky/20 bg-sky/10 p-5 text-sm leading-8 text-slate-700">
+              <p><strong>ความสนใจหลัก:</strong> กายวิภาคศาสตร์, การปฐมพยาบาล, โครงงานวิทยาศาสตร์, การใช้ข้อมูลเพื่อแก้ปัญหา</p>
+            </div>
+          </div>
+
+          <div class="rounded-3xl border border-border bg-white p-8 shadow-sm">
+            <h3 class="text-2xl font-semibold text-slate-900">ทักษะ</h3>
+            <div class="mt-6 space-y-6">
+              <div>
+                <p class="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-medical">Hard Skills</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="rounded-full bg-medical/10 px-3 py-2 text-sm text-medical">CPR / ปฐมพยาบาล</span>
+                  <span class="rounded-full bg-medical/10 px-3 py-2 text-sm text-medical">ทักษะแล็บชีววิทยา</span>
+                  <span class="rounded-full bg-medical/10 px-3 py-2 text-sm text-medical">การวิเคราะห์ข้อมูล</span>
+                </div>
+              </div>
+              <div>
+                <p class="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-mint">Soft Skills</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="rounded-full bg-mint/10 px-3 py-2 text-sm text-mint">Empathy</span>
+                  <span class="rounded-full bg-mint/10 px-3 py-2 text-sm text-mint">การทำงานเป็นทีม</span>
+                  <span class="rounded-full bg-mint/10 px-3 py-2 text-sm text-mint">การสื่อสาร</span>
+                  <span class="rounded-full bg-mint/10 px-3 py-2 text-sm text-mint">การแก้ปัญหา</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Work / Activities Section -->
+      <section id="work" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div class="mb-10">
+          <p class="mb-2 text-sm font-semibold uppercase tracking-[0.3em] text-medical">กิจกรรมและผลงาน</p>
+          <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">ประสบการณ์ที่สะท้อนความตั้งใจและความรับผิดชอบ</h2>
+        </div>
+
+        <div class="grid gap-6 lg:grid-cols-3">
+          <article class="card-hover rounded-3xl border border-border bg-white p-6 shadow-sm">
+            <div class="flex items-center justify-between">
+              <span class="rounded-full bg-sky/10 px-3 py-1 text-sm font-semibold text-medical">2568</span>
+              <i class="fa-solid fa-hospital text-2xl text-medical"></i>
+            </div>
+            <h3 class="mt-5 text-xl font-semibold text-slate-900">กิจกรรมจิตอาสาโรงพยาบาล</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-700">
+              เข้าร่วมกิจกรรมช่วยแบ่งเบาภาระเจ้าหน้าที่และเรียนรู้การดูแลผู้ป่วยอย่างมีความรับผิดชอบ
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="rounded-full bg-slateLight px-3 py-1 text-xs text-slate-600">ความรับผิดชอบ</span>
+              <span class="rounded-full bg-slateLight px-3 py-1 text-xs text-slate-600">บริการชุมชน</span>
+            </div>
+          </article>
+
+          <article class="card-hover rounded-3xl border border-border bg-white p-6 shadow-sm">
+            <div class="flex items-center justify-between">
+              <span class="rounded-full bg-mint/10 px-3 py-1 text-sm font-semibold text-mint">2567</span>
+              <i class="fa-solid fa-flask text-2xl text-mint"></i>
+            </div>
+            <h3 class="mt-5 text-xl font-semibold text-slate-900">การแข่งขันวิทยาศาสตร์และชีววิทยา</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-700">
+              ได้รับรางวัลในรายการตอบปัญหาทางวิทยาศาสตร์และพัฒนาทักษะวิเคราะห์ข้อมูลอย่างต่อเนื่อง
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="rounded-full bg-slateLight px-3 py-1 text-xs text-slate-600">วางแผน</span>
+              <span class="rounded-full bg-slateLight px-3 py-1 text-xs text-slate-600">การสื่อสาร</span>
+            </div>
+          </article>
+
+          <article class="card-hover rounded-3xl border border-border bg-white p-6 shadow-sm">
+            <div class="flex items-center justify-between">
+              <span class="rounded-full bg-medical/10 px-3 py-1 text-sm font-semibold text-medical">2566</span>
+              <i class="fa-solid fa-microscope text-2xl text-medical"></i>
+            </div>
+            <h3 class="mt-5 text-xl font-semibold text-slate-900">โครงงานวิทยาศาสตร์</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-700">
+              ศึกษาความสัมพันธ์ระหว่างสิ่งแวดล้อมและสุขภาพผ่านโครงงานที่ใช้หลักการวิทยาศาสตร์อย่างเป็นระบบ
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="rounded-full bg-slateLight px-3 py-1 text-xs text-slate-600">งานวิจัย</span>
+              <span class="rounded-full bg-slateLight px-3 py-1 text-xs text-slate-600">สรุปผล</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Certificates Section -->
+      <section id="certificates" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div class="mb-10">
+          <p class="mb-2 text-sm font-semibold uppercase tracking-[0.3em] text-medical">เกียรติบัตร</p>
+          <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">ความสำเร็จที่สะท้อนความพยายามและความมุ่งมั่น</h2>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <button class="group overflow-hidden rounded-3xl border border-border bg-white text-left shadow-sm" data-modal="1">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='560' viewBox='0 0 800 560'%3E%3Crect width='800' height='560' fill='%23f8fafc'/%3E%3Crect x='70' y='70' width='660' height='420' rx='24' fill='white' stroke='%23e2e8f0' stroke-width='3'/%3E%3Ctext x='400' y='240' text-anchor='middle' font-family='Prompt, Sarabun, sans-serif' font-size='36' fill='%230A369D' font-weight='700'%3Eเกียรติบัตร%3C/text%3E%3Ctext x='400' y='295' text-anchor='middle' font-family='Prompt, Sarabun, sans-serif' font-size='24' fill='%230F172A'%3Eการอบรมปฐมพยาบาล%3C/text%3E%3Ctext x='400' y='350' text-anchor='middle' font-family='Prompt, Sarabun, sans-serif' font-size='18' fill='%236b7280'%3Eสภากาชาดไทย • 2568%3C/text%3E%3C/svg%3E" alt="เกียรติบัตรการอบรมปฐมพยาบาล" class="h-56 w-full object-cover transition duration-300 group-hover:scale-105" loading="lazy" />
+            <div class="p-5">
+              <h3 class="text-lg font-semibold text-slate-900">อบรมปฐมพยาบาลพื้นฐาน</h3>
+              <p class="mt-2 text-sm text-slate-600">สภากาชาดไทย • 2568</p>
+            </div>
+          </button>
+
+          <button class="group overflow-hidden rounded-3xl border border-border bg-white text-left shadow-sm" data-modal="2">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='560' viewBox='0 0 800 560'%3E%3Crect width='800' height='560' fill='%23f8fafc'/%3E%3Crect x='70' y='70' width='660' height='420' rx='24' fill='white' stroke='%23e2e8f0' stroke-width='3'/%3E%3Ctext x='400' y='240' text-anchor='middle' font-family='Prompt, Sarabun, sans-serif' font-size='36' fill='%2310B981' font-weight='700'%3Eเกียรติบัตร%3C/text%3E%3Ctext x='400' y='295' text-anchor='middle' font-family='Prompt, Sarabun, sans-serif' font-size='24' fill='%230F172A'%3Eโครงงานวิทยาศาสตร์%3C/text%3E%3Ctext x='400' y='350' text-anchor='middle' font-family='Prompt, Sarabun, sans-serif' font-size='18' fill='%236b7280'%3Eโรงเรียน • 2567%3C/text%3E%3C/svg%3E" alt="เกียรติบัตรโครงงานวิทยาศาสตร์" class="h-56 w-full object-cover transition duration-300 group-hover:scale-105" loading="lazy" />
+            <div class="p-5">
+              <h3 class="text-lg font-semibold text-slate-900">โครงงานวิทยาศาสตร์ดีเด่น</h3>
+              <p class="mt-2 text-sm text-slate-600">โรงเรียน • 2567</p>
+            </div>
+          </button>
+
+          <button class="group overflow-hidden rounded-3xl border border-border bg-white text-left shadow-sm" data-modal="3">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='560' viewBox='0 0 800 560'%3E%3Crect width='800' height='560' fill='%23f8fafc'/%3E%3Crect x='70' y='70' width='660' height='420' rx='24' fill='white' stroke='%23e2e8f0' stroke-width='3'/%3E%3Ctext x='400' y='240' text-anchor='middle' font-family='Prompt, Sarabun, sans-serif' font-size='36' fill='%2338BDF8' font-weight='700'%3Eเกียรติบัตร%3C/text%3E%3Ctext x='400' y='295' text-anchor='middle' font-family='Prompt, Sarabun, sans-serif' font-size='24' fill='%230F172A'%3Eการแข่งขันชีววิทยา%3C/text%3E%3Ctext x='400' y='350' text-anchor='middle' font-family='Prompt, Sarabun, sans-serif' font-size='18' fill='%236b7280'%3Eมหาวิทยาลัย • 2566%3C/text%3E%3C/svg%3E" alt="เกียรติบัตรการแข่งขันชีววิทยา" class="h-56 w-full object-cover transition duration-300 group-hover:scale-105" loading="lazy" />
+            <div class="p-5">
+              <h3 class="text-lg font-semibold text-slate-900">รางวัลแข่งขันชีววิทยา</h3>
+              <p class="mt-2 text-sm text-slate-600">มหาวิทยาลัย • 2566</p>
+            </div>
+          </button>
+        </div>
+      </section>
+
+      <!-- Motivation Section -->
+      <section id="motivation" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div class="rounded-[2rem] border border-border bg-gradient-to-br from-medical to-sky p-8 text-white shadow-soft sm:p-10 lg:p-14">
+          <p class="mb-3 text-sm font-semibold uppercase tracking-[0.3em]">ทำไมถึงอยากเรียนแพทย์</p>
+          <h2 class="text-3xl font-bold sm:text-4xl">แรงบันดาลใจของฉันเริ่มจากการอยากช่วยเหลือคนอื่นอย่างแท้จริง</h2>
+          <div class="mt-8 grid gap-8 lg:grid-cols-[1fr_0.9fr]">
+            <div class="rounded-3xl bg-white/15 p-6 backdrop-blur">
+              <p class="text-lg leading-8 text-slate-50">
+                ตั้งแต่เด็กฉันมักจะถูกดูดซับด้วยความอยากรู้เกี่ยวกับร่างกายมนุษย์และการช่วยเหลือผู้อื่นเมื่อมีปัญหา ฉันเห็นว่าแพทย์ไม่เพียงแค่เป็นผู้เชี่ยวชาญ แต่ยังเป็นผู้ให้ความหวังและความปลอดภัยแก่ผู้ป่วยและครอบครัว
+              </p>
+            </div>
+            <div class="rounded-3xl bg-white/15 p-6 backdrop-blur">
+              <p class="text-lg leading-8 text-slate-50">
+                ในช่วงชั้นมัธยมศึกษาปีที่ 3 ฉันเตรียมตัวด้วยการพัฒนาทักษะด้านวิทยาศาสตร์ ความรับผิดชอบ และความเห็นอกเห็นใจผู้อื่น เพื่อเติบโตเป็นผู้เรียนที่พร้อมเข้าสู่ภาวะการเรียนรู้ในสภาพแวดล้อมของการแพทย์อย่างมีคุณภาพ
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div class="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+          <div class="rounded-3xl border border-border bg-white p-8 shadow-sm">
+            <p class="mb-2 text-sm font-semibold uppercase tracking-[0.3em] text-medical">ติดต่อ</p>
+            <h2 class="text-3xl font-bold text-slate-900">ช่องทางติดต่อและข้อมูลเพิ่มเติม</h2>
+            <div class="mt-8 space-y-4">
+              <div class="flex items-center gap-3 rounded-2xl bg-slateLight p-4">
+                <i class="fa-solid fa-phone text-medical"></i>
+                <span class="text-slate-700">081-234-5678</span>
+              </div>
+              <div class="flex items-center gap-3 rounded-2xl bg-slateLight p-4">
+                <i class="fa-solid fa-envelope text-medical"></i>
+                <span class="text-slate-700">student.medical@example.com</span>
+              </div>
+              <div class="flex items-center gap-3 rounded-2xl bg-slateLight p-4">
+                <i class="fa-brands fa-line text-mint"></i>
+                <span class="text-slate-700">@medicalstudent</span>
+              </div>
+              <div class="flex items-center gap-3 rounded-2xl bg-slateLight p-4">
+                <i class="fa-brands fa-instagram text-sky"></i>
+                <span class="text-slate-700">@future.doctor</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-3xl border border-border bg-white p-8 shadow-sm">
+            <h3 class="text-2xl font-semibold text-slate-900">ส่งข้อความถึงฉัน</h3>
+            <form id="contactForm" class="mt-6 space-y-4">
+              <div>
+                <label class="mb-2 block text-sm font-medium text-slate-700" for="name">ชื่อ</label>
+                <input id="name" type="text" class="w-full rounded-xl border border-border px-4 py-3 focus:border-medical focus:outline-none" placeholder="กรอกชื่อของคุณ" required />
+              </div>
+              <div>
+                <label class="mb-2 block text-sm font-medium text-slate-700" for="email">อีเมล</label>
+                <input id="email" type="email" class="w-full rounded-xl border border-border px-4 py-3 focus:border-medical focus:outline-none" placeholder="example@mail.com" required />
+              </div>
+              <div>
+                <label class="mb-2 block text-sm font-medium text-slate-700" for="message">ข้อความ</label>
+                <textarea id="message" rows="5" class="w-full rounded-xl border border-border px-4 py-3 focus:border-medical focus:outline-none" placeholder="เล่าเกี่ยวกับความสนใจของคุณ" required></textarea>
+              </div>
+              <button type="submit" class="inline-flex items-center rounded-xl bg-medical px-6 py-3 font-semibold text-white shadow-md transition hover:scale-105">
+                <i class="fa-solid fa-paper-plane mr-2"></i> ส่งข้อความ
+              </button>
+              <p id="formMessage" class="text-sm text-mint"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-border bg-white/80 py-6">
+      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 text-sm text-slate-600 sm:px-6 lg:flex-row lg:px-8">
+        <p>© 2026 Medical Portfolio. Designed for future medical students.</p>
+        <p>พัฒนาโดย Front-end Web Developer</p>
+      </div>
+    </footer>
+
+    <!-- Modal Lightbox -->
+    <div id="modal" class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/75 px-4 py-6">
+      <div class="relative w-full max-w-4xl rounded-3xl bg-white p-4 shadow-2xl">
+        <button id="closeModal" class="absolute right-4 top-4 rounded-full bg-slate-100 p-3 text-slate-700 transition hover:bg-slate-200" aria-label="ปิดหน้าต่าง">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <img id="modalImage" src="" alt="ภาพขยาย" class="max-h-[70vh] w-full rounded-2xl object-contain" />
+        <div class="mt-4 px-2">
+          <h3 id="modalTitle" class="text-xl font-semibold text-slate-900"></h3>
+          <p id="modalMeta" class="mt-2 text-sm text-slate-600"></p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Mobile navigation toggle
+      const menuToggle = document.getElementById('menuToggle');
+      const mobileNav = document.getElementById('mobileNav');
+      menuToggle?.addEventListener('click', () => {
+        mobileNav.classList.toggle('hidden');
+      });
+
+      // Active nav on scroll
+      const sections = [...document.querySelectorAll('main section[id]')];
+      const navLinks = [...document.querySelectorAll('.nav-link')];
+
+      const setActiveLink = () => {
+        const scrollPosition = window.scrollY + 140;
+        let activeId = 'home';
+
+        sections.forEach((section) => {
+          if (scrollPosition >= section.offsetTop) {
+            activeId = section.id;
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.toggle('active', link.getAttribute('href') === `#${activeId}`);
+        });
+      };
+
+      window.addEventListener('scroll', setActiveLink);
+      window.addEventListener('load', setActiveLink);
+
+      // Modal lightbox for certificates
+      const modal = document.getElementById('modal');
+      const modalImage = document.getElementById('modalImage');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalMeta = document.getElementById('modalMeta');
+      const closeModal = document.getElementById('closeModal');
+      const certificateButtons = [...document.querySelectorAll('[data-modal]')];
+
+      const certificateData = {
+        1: {
+          src: 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="1600" height="1120" viewBox="0 0 1600 1120"%3E%3Crect width="1600" height="1120" fill="%23f8fafc"/%3E%3Crect x="110" y="110" width="1380" height="900" rx="32" fill="white" stroke="%23e2e8f0" stroke-width="4"/%3E%3Ctext x="800" y="510" text-anchor="middle" font-family="Prompt, Sarabun, sans-serif" font-size="64" fill="%230A369D" font-weight="700"%3Eเกียรติบัตร%3C/text%3E%3Ctext x="800" y="590" text-anchor="middle" font-family="Prompt, Sarabun, sans-serif" font-size="36" fill="%230F172A"%3Eการอบรมปฐมพยาบาล%3C/text%3E%3Ctext x="800" y="650" text-anchor="middle" font-family="Prompt, Sarabun, sans-serif" font-size="26" fill="%236b7280"%3Eสภากาชาดไทย • 2568%3C/text%3E%3C/svg%3E',
+          title: 'อบรมปฐมพยาบาลพื้นฐาน',
+          meta: 'สภากาชาดไทย • 2568',
+        },
+        2: {
+          src: 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="1600" height="1120" viewBox="0 0 1600 1120"%3E%3Crect width="1600" height="1120" fill="%23f8fafc"/%3E%3Crect x="110" y="110" width="1380" height="900" rx="32" fill="white" stroke="%23e2e8f0" stroke-width="4"/%3E%3Ctext x="800" y="510" text-anchor="middle" font-family="Prompt, Sarabun, sans-serif" font-size="64" fill="%2310B981" font-weight="700"%3Eเกียรติบัตร%3C/text%3E%3Ctext x="800" y="590" text-anchor="middle" font-family="Prompt, Sarabun, sans-serif" font-size="36" fill="%230F172A"%3Eโครงงานวิทยาศาสตร์%3C/text%3E%3Ctext x="800" y="650" text-anchor="middle" font-family="Prompt, Sarabun, sans-serif" font-size="26" fill="%236b7280"%3Eโรงเรียน • 2567%3C/text%3E%3C/svg%3E',
+          title: 'โครงงานวิทยาศาสตร์ดีเด่น',
+          meta: 'โรงเรียน • 2567',
+        },
+        3: {
+          src: 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="1600" height="1120" viewBox="0 0 1600 1120"%3E%3Crect width="1600" height="1120" fill="%23f8fafc"/%3E%3Crect x="110" y="110" width="1380" height="900" rx="32" fill="white" stroke="%23e2e8f0" stroke-width="4"/%3E%3Ctext x="800" y="510" text-anchor="middle" font-family="Prompt, Sarabun, sans-serif" font-size="64" fill="%2338BDF8" font-weight="700"%3Eเกียรติบัตร%3C/text%3E%3Ctext x="800" y="590" text-anchor="middle" font-family="Prompt, Sarabun, sans-serif" font-size="36" fill="%230F172A"%3Eการแข่งขันชีววิทยา%3C/text%3E%3Ctext x="800" y="650" text-anchor="middle" font-family="Prompt, Sarabun, sans-serif" font-size="26" fill="%236b7280"%3Eมหาวิทยาลัย • 2566%3C/text%3E%3C/svg%3E',
+          title: 'รางวัลการแข่งขันชีววิทยา',
+          meta: 'มหาวิทยาลัย • 2566',
+        },
+      };
+
+      certificateButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const key = button.getAttribute('data-modal');
+          const data = certificateData[key];
+          modalImage.src = data.src;
+          modalTitle.textContent = data.title;
+          modalMeta.textContent = data.meta;
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      const closeModalHandler = () => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = '';
+      };
+
+      closeModal?.addEventListener('click', closeModalHandler);
+      modal?.addEventListener('click', (event) => {
+        if (event.target === modal) {
+          closeModalHandler();
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          closeModalHandler();
+        }
+      });
+
+      // Contact form interaction
+      const contactForm = document.getElementById('contactForm');
+      const formMessage = document.getElementById('formMessage');
+      contactForm?.addEventListener('submit', (event) => {
+        event.preventDefault();
+        formMessage.textContent = 'ข้อความของคุณถูกบันทึกไว้เรียบร้อยแล้ว ขอบคุณที่สนใจ portfolio นี้';
+        contactForm.reset();
+      });
+    </script>
+  </body>
+</html>
